@@ -52,3 +52,12 @@ jobs:
       # executar os testes e2e
       - name: Executando Testes E2E
         run: yarn run e2e
+
+      # upload do relatório de testes
+      - uses: actions/upload-artifact@v4
+        if: ${{ cancelled() }}
+        with:
+          name: relatorio
+          path: ./playwright-report
+      
+      
