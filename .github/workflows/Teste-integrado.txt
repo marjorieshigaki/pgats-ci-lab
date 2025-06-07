@@ -9,15 +9,18 @@
     - steps - instalar dependencias
     - steps - executar script de lint
   - jobs - unidade (bloco 1)
+    - depende de: inspecao
     - steps - instalar dependencias
     - steps - executar script de testes de unidade
   - jobs - e2e (bloco 2)
+    - depende de: unidade
     - steps - instalar dependencias
     - steps - subir aplicacao localmente
     - steps - instalar brosers/navegadores
     - steps - executar script de testes e2e
     - steps - publicar resultados de testes (zip/online)
   - jobs - deploy (bloco 3)
+    - depende de: e2e-tests
     - steps - instalar dependencias
     - steps - gerar artefatos de aplicacao
     - steps - publicar aplicacao em algum ambiente de homologacao
@@ -30,4 +33,10 @@ projeto TST
 actions/checkout - projeto Front End
 actions/checkout - projeto Back End
 actions/checkout - projeto TST
+
+
+self-hosted
+hosted-agent / cloud-hosted
+
+unbutu-latest - 
 
