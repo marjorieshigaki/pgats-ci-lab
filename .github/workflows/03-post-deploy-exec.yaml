@@ -59,5 +59,3 @@ jobs:
         with:
           name: relatorio
           path: ./playwright-report
-      
-      
