@@ -1,0 +1,33 @@
+- workflow - n1/n2/n3
+  - jobs - e2e
+    - steps - instalar dependencias
+    - steps - executar script de testes
+    - steps - publicar resultados
+
+- workflow - n4
+  - jobs - inspecao (bloco 1)
+    - steps - instalar dependencias
+    - steps - executar script de lint
+  - jobs - unidade (bloco 1)
+    - steps - instalar dependencias
+    - steps - executar script de testes de unidade
+  - jobs - e2e (bloco 2)
+    - steps - instalar dependencias
+    - steps - subir aplicacao localmente
+    - steps - instalar brosers/navegadores
+    - steps - executar script de testes e2e
+    - steps - publicar resultados de testes (zip/online)
+  - jobs - deploy (bloco 3)
+    - steps - instalar dependencias
+    - steps - gerar artefatos de aplicacao
+    - steps - publicar aplicacao em algum ambiente de homologacao
+
+
+projeto Front End
+projeto Back End
+projeto TST 
+
+actions/checkout - projeto Front End
+actions/checkout - projeto Back End
+actions/checkout - projeto TST
+
