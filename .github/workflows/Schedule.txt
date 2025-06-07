@@ -9,6 +9,7 @@ c - dia do mês
 d - mês
 e - dia da semana
 
+
 rodar o regressivo toda segunda-feira pela manhã
 
 'cron'
